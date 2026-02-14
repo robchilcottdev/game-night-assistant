@@ -10,6 +10,7 @@ app.use(express.static('public'));
 app.use(express.json());
 
 app.get('/api/get-states', async (_req, res) => {
+    console.log("Reached call to get-states");
     if (!TOKEN) return res.status(500).json({ error: MISSING_TOKEN });
     
     try {
@@ -43,7 +44,7 @@ try {
                 'Authorization': `Bearer ${TOKEN}`,
                 'Content-Type': 'application/json'
             },
-            body: JSON.stringify({ entity_id: req.body.entity_id })
+            body: JSON.stringify({ entity_id: req.body.entityId })
         });
 
         if (response.ok) {

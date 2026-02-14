@@ -5,7 +5,7 @@ description: "Let Game Night Assistant keep score and add some Home Assistant ma
 ingress: true
 ingress_port: 8099
 homeassistant_api: true
-panel_icon: mdi:dice
+panel_icon: mdi:cards-playing-heart-multiple-outline
 hassio_role: manager
 arch:
   - aarch64
